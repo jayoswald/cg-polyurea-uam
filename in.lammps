@@ -1,0 +1,162 @@
+#Initialization
+units           real
+atom_style      full
+
+# Forcefield parameters
+bond_style      harmonic
+angle_style     harmonic
+improper_style  harmonic
+dihedral_style  table linear 1001
+pair_style      table linear 1001
+
+read_data       uam-8b120c.lammps
+#read_dump	uam-8b120c-nvt.lammpstrj 0 x y z
+
+bond_coeff      1   298.753829251   1.54427946294
+bond_coeff      2   303.282587461   1.54043333741
+bond_coeff      3   373.060569905   1.43108808184
+bond_coeff      4   373.158163235   1.43952942798
+bond_coeff      5   360.509232273   1.36547258241
+bond_coeff      6   838.660145102   1.21503739852
+bond_coeff      7   335.105245292   1.48350950548
+bond_coeff      8   506.942274642   1.39627388754
+bond_coeff      9   311.153915516   1.40041682542
+bond_coeff      10   486.184713271   1.36454613507
+bond_coeff      11   839.112823821   1.22125220712
+bond_coeff      12   321.541174731   1.51645888862
+
+angle_coeff      1   56.9317234723   113.938237047
+angle_coeff      2   54.5105254474   114.958837474
+angle_coeff      3   47.3106054985   109.396051064
+angle_coeff      4   45.8403185641   115.886669658
+angle_coeff      5   52.5192007997   109.60704959
+angle_coeff      6   53.5620126531   115.468779977
+angle_coeff      7   73.1686319856   126.196150396
+angle_coeff      8   104.76897041   118.425764868
+angle_coeff      9   80.6665999796   109.158509504
+angle_coeff      10   63.3750149238   117.646169095
+angle_coeff      11   75.7267814482   119.749030464
+angle_coeff      12   74.9460082732   123.52065123
+angle_coeff      13   42.9751422911   121.326101293
+angle_coeff      14   100.718556208   125.541432141
+angle_coeff      15   94.6096173457   121.146739768
+angle_coeff      16   52.7497467435   124.035284799
+angle_coeff      17   57.663850991   110.646641167
+
+
+improper_coeff      1   35.4449170621   180.000000015
+improper_coeff      2   17.7794646261   179.99999999
+improper_coeff      3   17.8527967155   179.999999995
+improper_coeff      4   51.3796608739   180.000000003
+improper_coeff      5   9.6385658701   179.999999998
+
+
+dihedral_coeff 1  potentials/dihedral.table.AAAA AAAA
+dihedral_coeff 2  potentials/dihedral.table.AAAB AAAB
+dihedral_coeff 3  potentials/dihedral.table.AABC AABC
+dihedral_coeff 4  potentials/dihedral.table.ABCB ABCB
+dihedral_coeff 5  potentials/dihedral.table.BAAB BAAB
+dihedral_coeff 6  potentials/dihedral.table.AABD AABD
+dihedral_coeff 7  potentials/dihedral.table.ABDE ABDE
+dihedral_coeff 8  potentials/dihedral.table.BDEI BDEI
+dihedral_coeff 9  potentials/dihedral.table.BDEF BDEF
+dihedral_coeff 10 potentials/dihedral.table.FFEI FFEI
+dihedral_coeff 11 potentials/dihedral.table.DEFF DEFF
+dihedral_coeff 12 potentials/dihedral.table.FFFF FFFF
+dihedral_coeff 13 potentials/dihedral.table.EFFF EFFF
+dihedral_coeff 14 potentials/dihedral.table.FFFG FFFG
+dihedral_coeff 15 potentials/dihedral.table.FFGH FFGH
+dihedral_coeff 16 potentials/dihedral.table.FGHG FGHG
+dihedral_coeff 17 potentials/dihedral.table.FGHI FGHI
+dihedral_coeff 18 potentials/dihedral.table.AFFF AFFF
+dihedral_coeff 19 potentials/dihedral.table.FAFF FAFF
+
+pair_coeff      1 1 potentials/pair.table.AA AA
+pair_coeff      1 2 potentials/pair.table.AB AB
+pair_coeff      1 3 potentials/pair.table.AC AC
+pair_coeff      1 4 potentials/pair.table.AD AD
+pair_coeff      1 5 potentials/pair.table.AE AE
+pair_coeff      1 6 potentials/pair.table.AF AF
+pair_coeff      1 7 potentials/pair.table.AG AG
+pair_coeff      1 8 potentials/pair.table.AH AH
+pair_coeff      1 9 potentials/pair.table.AI AI
+pair_coeff      2 2 potentials/pair.table.BB BB
+pair_coeff      2 3 potentials/pair.table.BC BC
+pair_coeff      2 4 potentials/pair.table.BD BD
+pair_coeff      2 5 potentials/pair.table.BE BE
+pair_coeff      2 6 potentials/pair.table.BF BF
+pair_coeff      2 7 potentials/pair.table.BG BG
+pair_coeff      2 8 potentials/pair.table.BH BH
+pair_coeff      2 9 potentials/pair.table.BI BI
+pair_coeff      3 3 potentials/pair.table.CC CC
+pair_coeff      3 4 potentials/pair.table.CD CD
+pair_coeff      3 5 potentials/pair.table.CE CE
+pair_coeff      3 6 potentials/pair.table.CF CF
+pair_coeff      3 7 potentials/pair.table.CG CG
+pair_coeff      3 8 potentials/pair.table.CH CH
+pair_coeff      3 9 potentials/pair.table.CI CI
+pair_coeff      4 4 potentials/pair.table.DD DD
+pair_coeff      4 5 potentials/pair.table.DE DE
+pair_coeff      4 6 potentials/pair.table.DF DF
+pair_coeff      4 7 potentials/pair.table.DG DG
+pair_coeff      4 8 potentials/pair.table.DH DH
+pair_coeff      4 9 potentials/pair.table.DI DI
+pair_coeff      5 5 potentials/pair.table.EE EE
+pair_coeff      5 6 potentials/pair.table.EF EF
+pair_coeff      5 7 potentials/pair.table.EG EG
+pair_coeff      5 8 potentials/pair.table.EH EH
+pair_coeff      5 9 potentials/pair.table.EI EI
+pair_coeff      6 6 potentials/pair.table.FF FF
+pair_coeff      6 7 potentials/pair.table.FG FG
+pair_coeff      6 8 potentials/pair.table.FH FH
+pair_coeff      6 9 potentials/pair.table.FI FI
+pair_coeff      7 7 potentials/pair.table.GG GG
+pair_coeff      7 8 potentials/pair.table.GH GH
+pair_coeff      7 9 potentials/pair.table.GI GI
+pair_coeff      8 8 potentials/pair.table.HH HH
+pair_coeff      8 9 potentials/pair.table.HI HI
+pair_coeff      9 9 potentials/pair.table.II II
+
+#########################################################
+neigh_modify    delay 0 every 1 check yes
+special_bonds   lj/coul 0.0 0.0 1.0
+
+thermo_style    custom step temp press etotal ke pe
+thermo          100
+timestep        2
+
+velocity        all create 800.0 1234
+fix             1 all nve/limit 1.0
+fix             2 all temp/rescale 1 800.0 800.0 5 1.0
+run             500000
+unfix           1
+unfix           2
+
+reset_timestep  0
+fix             1 all npt temp 800 800 100 iso 1 1 100
+run             5000000
+unfix           1
+
+fix             1 all npt temp 800 500 100 iso 1 1 100
+run             5000000
+unfix           1
+
+fix             1 all npt temp 500 500 100 iso 1 1 100
+run             5000000
+unfix           1
+
+fix             1 all npt temp 500 300 100 iso 1 1 100
+run             5000000
+unfix           1
+
+fix             1 all npt temp 300 300 100 iso 1 1 100
+run             5000000
+unfix           1
+
+reset_timestep  0
+fix             1 all nvt temp 300 300 100
+dump            2 all custom 100000 uam-8b120c-nvt.lammpstrj id mol type x y z
+dump_modify     2 sort id
+run             500000
+write_data      uam-8b120c-equi.lammps
+unfix           1
